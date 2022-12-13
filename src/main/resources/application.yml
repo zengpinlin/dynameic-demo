@@ -2,6 +2,11 @@ server:
   port: 9701
 
 spring:
+  main:
+    # 允许bean可以重写覆盖
+    allow-bean-definition-overriding: true
+    # 允许循环依赖
+    allow-circular-references: true
   datasource:
     url: jdbc:mysql://localhost:3306/pinlin?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
     driver-class-name: com.mysql.cj.jdbc.Driver

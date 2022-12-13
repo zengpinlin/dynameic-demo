@@ -1,13 +1,13 @@
-package com.zpl.dynameic;
+package com.zpl.dynamic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DynameicDemoApplication {
+public class DynamicDemoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DynameicDemoApplication.class, args);
+        SpringApplication.run(DynamicDemoApplication.class, args);
     }
 
 }
