@@ -31,6 +31,7 @@ public class MybatisAutoConfiguration {
     public MybatisPlusInterceptor mybatisPlusInterceptor() {
         MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
         DynamicTableNameInnerInterceptor dynamicTableNameInnerInterceptor = new DynamicTableNameInnerInterceptor();
+        // 需要放到第一位，切记不要放错，不然会导致动态表名切换失效
         dynamicTableNameInnerInterceptor.setTableNameHandler(tableNameHandler);
         interceptor.addInnerInterceptor(dynamicTableNameInnerInterceptor);
         interceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.MYSQL));
